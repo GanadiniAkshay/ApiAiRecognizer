@@ -7,6 +7,9 @@
 
 npm install api-ai-recognizer
 
+## Tutorial
+http://blog.ozz.ai/using-api-ai-with-microsoft-bot-framework/
+
 ## Usage
 &nbsp;&nbsp;&nbsp;&nbsp;var builder = require('botbuilder');  
 &nbsp;&nbsp;&nbsp;&nbsp;var connector = new builder.ConsoleConnector().listen();  
