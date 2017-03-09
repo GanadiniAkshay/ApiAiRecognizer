@@ -1,5 +1,6 @@
 "use strict";
 var apiai = require('apiai');
+const uuid = require('uuid');
 
 var ApiAiRecognizer = function(token){
     this.app = apiai(token);
@@ -9,7 +10,7 @@ var ApiAiRecognizer = function(token){
 ApiAiRecognizer.prototype.recognize = function (context, done){
             var intent = { score: 0.0 };
             if (context.message.text){
-                var request = this.app.textRequest(context.message.text.toLowerCase(),{sessionId: 'kjfgwsjhedfcb281908'});
+                var request = this.app.textRequest(context.message.text.toLowerCase(),{sessionId: uuid()});
 
                 request.on('response', function(response){
                     var result = response.result;
@@ -78,7 +79,7 @@ ApiAiRecognizer.prototype.recognize = function (context, done){
 
                 request.on('error', function(error){
                     console.log(error);
-                    done(null, intent);
+                    done(error);
                 });
 
                 request.end(); 
