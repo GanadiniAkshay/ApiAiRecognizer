@@ -79,7 +79,7 @@ ApiAiRecognizer.prototype.recognize = function (context, done){
 
                 request.on('error', function(error){
                     console.log(error);
-                    done(null, intent);
+                    done(error);
                 });
 
                 request.end(); 
