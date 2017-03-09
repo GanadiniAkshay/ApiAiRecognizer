@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/GanadiniAkshay/ApiAiRecognizer#readme",
   "dependencies": {
-    "apiai": "^3.0.3"
+    "apiai": "^3.0.3",
+    "uuid": "^3.0.1"
   }
 }
