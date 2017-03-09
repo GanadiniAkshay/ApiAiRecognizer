@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deksden/ApiAiRecognizer.git"
+    "url": "git+https://github.com/GanadiniAkshay/ApiAiRecognizer.git"
   },
   "keywords": [
     "api.ai",
@@ -22,9 +22,9 @@
   "author": "Akshay Kulkarni <akshaykulkarni.2104@gmail.com> (http://github.com/GanadiniAkshay)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/deksden/ApiAiRecognizer/issues"
+    "url": "https://github.com/GanadiniAkshay/ApiAiRecognizer/issues"
   },
-  "homepage": "https://github.com/deksden/ApiAiRecognizer#readme",
+  "homepage": "https://github.com/GanadiniAkshay/ApiAiRecognizer#readme",
   "dependencies": {
     "apiai": "^4.0.1",
     "uuid": "^3.0.1"
