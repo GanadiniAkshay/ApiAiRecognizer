@@ -11,7 +11,7 @@ ApiAiRecognizer.prototype.recognize = function (context, done){
             var intent = { score: 0.0 };
             try {            
                 var sessionId = context.message.address.channelId+context.message.address.user.id;
-            } catch {
+            } catch(err) {
                 var sessionId = uuid();
             }
     
