@@ -9,8 +9,14 @@ var ApiAiRecognizer = function(token){
 
 ApiAiRecognizer.prototype.recognize = function (context, done){
             var intent = { score: 0.0 };
+            try {            
+                var sessionId = context.message.address.channelId+context.message.address.user.id;
+            } catch(err) {
+                var sessionId = uuid();
+            }
+    
             if (context.message.text){
-                var request = this.app.textRequest(context.message.text.toLowerCase(),{sessionId: uuid()});
+                var request = this.app.textRequest(context.message.text.toLowerCase(),{sessionId: sessionId});
 
                 request.on('response', function(response){
                     var result = response.result;
