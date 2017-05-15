@@ -1,6 +1,6 @@
 {
   "name": "api-ai-recognizer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A module to use api.ai for NLP in microsoft bot framework instead of LUIS",
   "main": "index.js",
   "scripts": {

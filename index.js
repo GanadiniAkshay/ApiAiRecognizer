@@ -90,6 +90,10 @@ ApiAiRecognizer.prototype.recognize = function (context, done){
 
                 request.end(); 
             }
+            else{
+                intent = {score:1, intent:"None",entities:[]};
+                done(null, intent);
+            }
 }
 
 module.exports = ApiAiRecognizer;
