@@ -10,7 +10,10 @@ var ApiAiRecognizer = function(token){
 ApiAiRecognizer.prototype.recognize = function (context, done){
             var intent = { score: 0.0 };
             try {            
-                var sessionId = context.message.address.channelId+context.message.address.user.id;
+                var sessionId = context.message.address.user.id + context.message.address.channelId;
+                if (sessionId.length > 36){
+                    sessionId = sessionId.slice(0,35);
+                }
             } catch(err) {
                 var sessionId = uuid();
             }
