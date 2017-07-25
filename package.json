@@ -1,5 +1,5 @@
 {
-  "name": "Botbuilder-ApiAiRecognizer",
+  "name": "botbuilder-apiai",
   "version": "1.0.0",
   "description": "A module to use api.ai for NLU in microsoft bot framework instead of LUIS",
   "main": "index.js",

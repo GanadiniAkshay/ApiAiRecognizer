@@ -5,7 +5,7 @@
 
 ## Installation
 
-npm install Botbuilder-ApiAiRecognizer
+npm install botbuilder-apiai
 
 ## Usage
 &nbsp;&nbsp;&nbsp;&nbsp;var builder = require('botbuilder');  
