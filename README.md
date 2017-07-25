@@ -13,7 +13,7 @@ npm install botbuilder-apiai
 
 &nbsp;&nbsp;&nbsp;&nbsp;var bot       = new builder.UniversalBot(connector);  
 
-&nbsp;&nbsp;&nbsp;&nbsp;var apiairecognizer = require('api-ai-recognizer');  
+&nbsp;&nbsp;&nbsp;&nbsp;var apiairecognizer = require('botbuilder-apiai');  
 &nbsp;&nbsp;&nbsp;&nbsp;var recognizer      = new apiairecognizer(<api.ai client access token>);  
 
 &nbsp;&nbsp;&nbsp;&nbsp;var intents = new builder.IntentDialog({  
