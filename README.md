@@ -1,14 +1,11 @@
-# api-ai-recognizer
+# API.ai Recoginzer for Microsoft Botframework 
 
-### Use api.ai instead of LUIS in Microsoft Bot Framework
+### Based on: https://github.com/GanadiniAkshay/ApiAiRecognizer
 
 
 ## Installation
 
-npm install api-ai-recognizer
-
-## Tutorial
-http://blog.ozz.ai/using-api-ai-with-microsoft-bot-framework/
+npm install botbuilder-apiai
 
 ## Usage
 &nbsp;&nbsp;&nbsp;&nbsp;var builder = require('botbuilder');  
@@ -16,7 +13,7 @@ http://blog.ozz.ai/using-api-ai-with-microsoft-bot-framework/
 
 &nbsp;&nbsp;&nbsp;&nbsp;var bot       = new builder.UniversalBot(connector);  
 
-&nbsp;&nbsp;&nbsp;&nbsp;var apiairecognizer = require('api-ai-recognizer');  
+&nbsp;&nbsp;&nbsp;&nbsp;var apiairecognizer = require('botbuilder-apiai');  
 &nbsp;&nbsp;&nbsp;&nbsp;var recognizer      = new apiairecognizer(<api.ai client access token>);  
 
 &nbsp;&nbsp;&nbsp;&nbsp;var intents = new builder.IntentDialog({  
@@ -64,6 +61,8 @@ Fulfillments are available as entitities with the entity name as fulfillment and
 You can use prompts provided by api.ai for required entities very easily. Just check the actionIncomplete entity from  
 the entities list and if its true use the fulfillment to send out the prompt.
 
+## Added functionaliy
+`onEnabled()` function has been added.
 
 ## Contributing
 
