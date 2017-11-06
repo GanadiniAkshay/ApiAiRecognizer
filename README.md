@@ -4,15 +4,16 @@
 
 
 ## Installation
-
+```
 npm install botbuilder-apiai
+```
 
 ## Usage
 ```js
 var builder = require('botbuilder');  
 var connector = new builder.ConsoleConnector().listen();  
 
-var bot       = new builder.UniversalBot(connector);  
+var bot = new builder.UniversalBot(connector);  
 
 var apiairecognizer = require('botbuilder-apiai');  
 var recognizer      = new apiairecognizer(<api.ai client access token>);  
@@ -38,11 +39,11 @@ var city = builder.EntityRecognizer.findEntity(args.entities, 'city');
 The schema for each entity retrieved with the about method is as below:  
 ```json
  {
-  "entity"    : "entity value",  
-  "type"      : "entity name",   
-  "startIndex": "start index of entity",   
-  "endIndex"  : "end index of entity",  
-  "score"     : 1   
+    "entity"    : "entity value",  
+    "type"      : "entity name",   
+    "startIndex": "start index of entity",   
+    "endIndex"  : "end index of entity",  
+    "score"     : 1   
  }
  ```
 
