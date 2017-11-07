@@ -1,6 +1,4 @@
-# API.ai Recoginzer for Microsoft Botframework 
-
-### Based on: https://github.com/GanadiniAkshay/ApiAiRecognizer
+# API.ai Recoginzer for Microsoft Bot Framework 
 
 
 ## Installation
