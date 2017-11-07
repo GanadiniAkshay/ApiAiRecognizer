@@ -3,7 +3,7 @@
 
 ## Installation
 ```
-npm install botbuilder-apiai
+npm install api-ai-recognizer
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ var connector = new builder.ConsoleConnector().listen();
 
 var bot = new builder.UniversalBot(connector);  
 
-var apiairecognizer = require('botbuilder-apiai');  
+var apiairecognizer = require('api-ai-recognizer');  
 var recognizer      = new apiairecognizer(<api.ai client access token>);  
 
 var intents = new builder.IntentDialog({  
