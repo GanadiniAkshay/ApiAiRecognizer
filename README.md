@@ -4,43 +4,48 @@
 
 
 ## Installation
-
+```
 npm install botbuilder-apiai
+```
 
 ## Usage
-&nbsp;&nbsp;&nbsp;&nbsp;var builder = require('botbuilder');  
-&nbsp;&nbsp;&nbsp;&nbsp;var connector = new builder.ConsoleConnector().listen();  
+```js
+var builder = require('botbuilder');  
+var connector = new builder.ConsoleConnector().listen();  
 
-&nbsp;&nbsp;&nbsp;&nbsp;var bot       = new builder.UniversalBot(connector);  
+var bot = new builder.UniversalBot(connector);  
 
-&nbsp;&nbsp;&nbsp;&nbsp;var apiairecognizer = require('botbuilder-apiai');  
-&nbsp;&nbsp;&nbsp;&nbsp;var recognizer      = new apiairecognizer(<api.ai client access token>);  
+var apiairecognizer = require('botbuilder-apiai');  
+var recognizer      = new apiairecognizer(<api.ai client access token>);  
 
-&nbsp;&nbsp;&nbsp;&nbsp;var intents = new builder.IntentDialog({  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    recognizers: [recognizer];  
-&nbsp;&nbsp;&nbsp;&nbsp;});  
+var intents = new builder.IntentDialog({  
+    recognizers: [recognizer];  
+});  
 
-&nbsp;&nbsp;&nbsp;&nbsp;bot.dialog('/',intents);  
+bot.dialog('/',intents);  
 
-&nbsp;&nbsp;&nbsp;&nbsp;intents.matches('intent.name',function(session,args){  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    session.send("your response");  
-&nbsp;&nbsp;&nbsp;&nbsp;});
+intents.matches('intent.name',function(session,args){  
+    session.send("your response");  
+});
+```
 
 ## Using Entities
 
 Entities can be found in the args.entities object and can be retrieved using code like below:  
-  
-&nbsp;&nbsp;&nbsp;&nbsp;var city = builder.EntityRecognizer.findEntity(args.entities, 'city');  
+```js
+var city = builder.EntityRecognizer.findEntity(args.entities, 'city');  
+```
 
 The schema for each entity retrieved with the about method is as below:  
-
-&nbsp;&nbsp;&nbsp;&nbsp; {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  entity: 'entity value',  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  type  : 'entity name',   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  startIndex: 'start index of entity',   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  endIndex:   'end index of entity',  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  score:   1   
-&nbsp;&nbsp;&nbsp;&nbsp; }
+```json
+ {
+    "entity"    : "entity value",  
+    "type"      : "entity name",   
+    "startIndex": "start index of entity",   
+    "endIndex"  : "end index of entity",  
+    "score"     : 1   
+ }
+ ```
 
 
 ## Using Fulfillment
@@ -48,13 +53,13 @@ The schema for each entity retrieved with the about method is as below:
 api.ai provides fulfillment which can be useful if you are using domains for your chat agent  
 
 Fulfillments are available as entitities with the entity name as fulfillment and can be used like below:  
-
-&nbsp;&nbsp;&nbsp;&nbsp; var fulfillment = builder.EntityRecognizer.findEntity(args.entities, 'fulfillment');  
-&nbsp;&nbsp;&nbsp;&nbsp; if (fulfillment) {  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var speech = fulfillment.entity;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session.send(speech);  
-&nbsp;&nbsp;&nbsp;&nbsp; }
-
+```js
+var fulfillment = builder.EntityRecognizer.findEntity(args.entities, 'fulfillment');  
+if (fulfillment) {  
+  var speech = fulfillment.entity;
+  session.send(speech);  
+}
+```
 
 ## Using Prompts
 
