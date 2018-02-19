@@ -64,6 +64,17 @@ if (fulfillment) {
 You can use prompts provided by api.ai for required entities very easily. Just check the actionIncomplete entity from  
 the entities list and if its true use the fulfillment to send out the prompt.
 
+```js
+var incomplete = builder.EntityRecognizer.findEntity(args.entities, 'actionIncomplete');
+if (incomplete){
+    var fulfillment = builder.EntityRecognizer.findEntity(args.entities, 'fulfillment');  
+    if (fulfillment) {  
+      var speech = fulfillment.entity;
+      session.send(speech);  
+    }
+}
+```
+
 ## Added functionaliy
 `onEnabled()` function has been added.
 
