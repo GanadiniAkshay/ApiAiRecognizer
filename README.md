@@ -1,4 +1,4 @@
-# API.ai Recoginzer for Microsoft Bot Framework 
+# Dialogflow(API.ai) Recoginzer for Microsoft Bot Framework 
 
 
 ## Installation
@@ -48,7 +48,7 @@ The schema for each entity retrieved with the about method is as below:
 
 ## Using Fulfillment
 
-api.ai provides fulfillment which can be useful if you are using domains for your chat agent  
+Dialogflow(api.ai) provides fulfillment which can be useful if you are using domains for your chat agent  
 
 Fulfillments are available as entitities with the entity name as fulfillment and can be used like below:  
 ```js
@@ -61,7 +61,7 @@ if (fulfillment) {
 
 ## Using Prompts
 
-You can use prompts provided by api.ai for required entities very easily. Just check the actionIncomplete entity from  
+You can use prompts provided by Dialogflow(api.ai) for required entities very easily. Just check the actionIncomplete entity from  
 the entities list and if its true use the fulfillment to send out the prompt.
 
 ```js
